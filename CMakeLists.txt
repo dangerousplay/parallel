@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 
-add_executable(parallel pthread.cpp sort.h)
+add_executable(parallel openmp.cpp sort.h)
 
 find_package(Threads REQUIRED)
 FIND_PACKAGE(OpenMP)

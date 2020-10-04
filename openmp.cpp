@@ -31,6 +31,8 @@ int main() {
 
   gettimeofday(&start, NULL);
 
+  omp_set_num_threads(threads_number);
+
   #pragma omp parallel shared(size, threads_number, load_factor, vector, result) default(none)
   {
     int number = omp_get_thread_num();

@@ -8,7 +8,7 @@
 #include "sort.h"
 
 int main() {
-  int size = 20;
+  int size = 200000;
 
   struct timeval start;
   struct timeval end;
@@ -17,12 +17,12 @@ int main() {
   int* result = (int*) calloc(size, sizeof(int));
 
   for(int i = 0; i < size; i++) {
-    vector[i] = rand() % 1000;
+    vector[i] = rand();
   }
 
-  for(int i = 0; i < size; i++) {
+  /*for(int i = 0; i < size; i++) {
     printf("%d ", vector[i]);
-  }
+  }*/
 
   printf("\n\n");
 
@@ -36,9 +36,9 @@ int main() {
 
   printf("Time elapsed in milliseconds: %lld \n \n", difference);
 
-  for(int i = 0; i < size; i++) {
+  /*for(int i = 0; i < size; i++) {
     printf("%d ", result[i]);
-  }
+  }*/
 
   return 0;
 }
